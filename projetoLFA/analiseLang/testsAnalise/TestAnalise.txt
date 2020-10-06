@@ -1,0 +1,35 @@
+import "TestConfigDimUni.txt"
+
+length a = 3 meters
+print a
+
+int t = 100
+
+
+length x = 4meters * t
+length y = x + 5 mile
+
+if(t == 100) then
+    temperature z = 2 celsius
+end
+
+if(1 & 0) then
+    length d = 10 meters
+end
+
+temperature w = z + 25 fahrenheit
+mass mas = 5 * 10 kg
+
+for(i = 0;i<100; i = i + 1){
+    length ver = ver + i
+}
+
+print ver
+
+mass j = 0kg
+
+do{
+   mass j = j + 1kg
+}while(j<=3kg)
+
+

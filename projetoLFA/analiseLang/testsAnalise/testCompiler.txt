@@ -1,0 +1,31 @@
+import "out.txt"
+
+int a = 2
+int b = 3
+int j = 0
+
+if a < b then
+   int i = j + 1
+end
+
+int k = 0
+int m = 0
+for (k = 1; k<50;k = k+1 ){
+   int m = (k+8)/2
+   do{
+      print k
+      print m
+   }while(k==20)
+}
+
+
+while(a > j){
+   print a
+   if a == 2 then
+      int a = a - 1
+   else
+      int a = a + 1
+   end
+}
+print j
+

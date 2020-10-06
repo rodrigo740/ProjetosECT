@@ -1,0 +1,100 @@
+powerTypeCast ::= [
+   "integer":"(int)",
+   "real":"",
+   default:"null"
+]
+
+booleanValue ::= [
+   "true":"true",
+   "false":"false",
+   default:"null"
+]
+
+typeValue ::= [
+   "integer":"int",
+   "real":"double",
+   "boolean":"boolean",
+   "string":"String",
+   default:"null"
+]
+
+typeFormat ::= [
+   "integer":"",
+   "real":"",
+   "boolean":"",
+   "string":"",
+   default:"null"
+]
+
+
+
+importFile(String) ::= "import <String>;"
+
+module(name,stat) ::= <<
+   public class <name> {
+      public static void main(String[] args) {
+         <stats(stat)>
+      }
+   }
+>>
+
+stats(stat) ::= <<
+   <if(stat)><stat; separator="\n"><endif>
+>>
+
+init(value) ::= "<if(value)> = <value><endif>"
+
+decl(type,var,value) ::= "<typeValue.(type)> <var><init(value)>;"
+
+for(var,value,e1,e2,program) ::= << 
+   for(<var>=<value>;<e1>;<e2>){
+      <program; separator="\n">
+   }
+>>
+
+while(e, program) ::= <<
+   while(<e>){
+      <program; separator="\n">
+   }
+>>
+
+do(program,loopWhile) ::= <<
+   do{
+      <program; separator="\n">
+   } <loopWhile>;
+>>
+
+if(e,stat_true,stat_false) ::= <<
+   if (<e>) { 
+      <stat_true>
+   }<if(stat_false)> 
+   else{ 
+      <stat_false>
+   }<endif>
+>>
+
+function(type,name,e,program) ::= <<
+   <type> <name>(<e; separator=", ">) {
+      <program; separator=";\n">;
+   }
+>>
+
+assign(type ,var,e) ::= <<
+   <type> <var> = <e>;
+>>
+
+operations(dimension,var,e1,op,e2) ::= "<decl(dimension,var,[e1,\" \",op,\" \",e2])>"
+
+print(value) ::= "System.out.print(<value>);"
+
+BooleanLiteral(value) ::= "<booleanValue.(value)>"
+
+BooleanComparator(e1,op,e2) ::= "[e1,\" \",op,\" \",e2]"
+
+powerExpression(type,var,e1,e2) ::= "<decl(type,var,[powerTypeCast.(type),\"Math.pow(\",e1,\",\",e2,\")\"])>"
+
+id(val) ::= "<val>"
+
+ExprNot(e) ::= "!<e>"
+
+Type(type) ::= "<String>" 

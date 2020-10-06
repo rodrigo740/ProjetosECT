@@ -1,0 +1,6 @@
+DefineDim force(int): N
+DefineDim mass(real, pos):Kg,g(Kg*1000)
+DefineDim distance(int):m,km(m/1000)
+DefineDim accelaration(real):length/time^2
+
+DefineUni tons(kg*1000): mass

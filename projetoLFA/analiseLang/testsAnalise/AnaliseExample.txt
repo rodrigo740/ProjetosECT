@@ -1,0 +1,15 @@
+#Calcular acelaraçao de um objeto de 3.4 toneladas que é empurrado com uma força de 40 Newtons
+#e atrito de 15 Newtons
+
+#import "DimUniExample.txt"
+boolean bool = true
+
+if NOT bool then
+    real m = 3.4 
+end
+    integer f = 40 
+    integer a = -15 
+    integer r = f + a
+    real ac = r/r
+
+print ac

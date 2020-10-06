@@ -1,0 +1,8 @@
+DefineDim length(int,pos): meters,cm(meters*0.01),km(meters*1000)
+DefineDim time(int): seconds,min(seconds/60),h(seconds/360)
+DefineDim temperature(real): celsius,kelvin(celsius + 273.15),fahrenheit(1.8*celsius + 32)
+DefineDim acceleration(real,neg): length/time^2
+DefineDim mass(real,pos):kg,g(kg*1000)
+
+DefineUni mile(1609.3*meters): length
+DefineUni tons(kg*1000):mass

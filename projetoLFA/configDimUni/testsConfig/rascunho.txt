@@ -1,0 +1,32 @@
+DefineDim velocity(real,neg) : length/time
+DefineDim force(real,pos) : N, (dim1*dim2/dim3)
+
+
+DefineDim length(int) : metres,miles(metres*223),cm(0.001)
+DefineDim time(int,neg) : seconds,hours(1+seconds/dim1*222-7*4^2/7/7/7/7/7)
+
+
+DefineDim length (int,pos) : metres,miles(metres*223),cm(metres*100)
+#DefineDim length : metres,miles(metres*223),cm(0.001),Real,Neg
+#DefineDim length : metres,miles(metres*223),cm(0.001)-Real,Neg
+
+
+#defineDim: DefineDim Dimension=ID ':' (Unity=ID | expr) (, Unity=ID '(' expr ')' )*
+
+#defineDim: DefineDim Dimension=ID ':' (Unity=ID (, Unity=ID '(' expr ')' )*) | (expr) | (Unity=ID ',' expr)
+
+
+#--------> defineDim: DefineDim Dimension=ID ':' (Unity=ID | expr) (',' Unity=ID? '(' expr ')' )*  <------------
+
+
+
+(ID + num)
+Num + ID
+id - num
+num - id
+
+
+
+
+
+
