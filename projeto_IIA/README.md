@@ -1,5 +1,6 @@
 # iia-ia-sokoban
 Sokoban clone for AI teaching
+
 This was a project for IIA class made with [Lúcia Sousa](https://github.com/luciasousa) and [Raquel Pinto](https://github.com/RaquelPinto2000)
 
 ![Demo](https://github.com/dgomes/iia-ia-sokoban/raw/master/data/sokoban_screenshot.png)
